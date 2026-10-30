@@ -1,0 +1,15 @@
+
+# LaTeX compilation files
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# OS/Editor temp files
+.vscode/
+.idea/
