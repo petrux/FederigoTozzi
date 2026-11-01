@@ -1,0 +1,82 @@
+\makeatletter
+\def\input@path{{../../latex/}} % Specifica a LaTeX dove cercare i file .sty
+\makeatother
+
+\documentclass[11pt,twoside,openright]{book}
+
+\usepackage{../latex/book-style}
+
+\begin{document}
+
+\frontmatter
+
+%% Front page
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    
+    {\Large\scshape Federigo Tozzi}
+    
+    \vspace{0.4cm}
+    \rule{2cm}{0.4pt}
+    \vspace{2cm}
+    
+    {\Huge\bfseries Con gli occhi chiusi}
+    
+    \vspace{0.8cm}
+    {\large\scshape Romanzo}
+    
+    \vfill
+    
+    % Placeholder for logo
+    % \includegraphics[width=3cm]{...} 
+    % \vspace{1cm}
+    
+    {\large MILANO}\\[0.2cm]
+    {\large\scshape Fratelli Treves, Editori}\\[0.2cm]
+    {\small 1919}
+    
+    \vspace*{1cm}
+\end{titlepage}
+
+%% Colophon and Credits
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+
+\begin{small}
+\setlength{\parindent}{0pt} % Rimuove l'indentazione in tutto il blocco
+\setlength{\parskip}{0.8em}   % Gestisce lo spazio verticale uniforme tra i blocchi
+
+\textbf{Federigo Tozzi} — \textit{Con gli occhi chiusi} (1919)
+\vspace{0.8em}
+
+\textbf{Public Domain Notice\slash Pubblico Dominio}\\
+The original literary text by Federigo Tozzi is in the Public Domain.\\
+\textit{Il testo letterario originale di Federigo Tozzi è di pubblico dominio.}
+
+\vspace{0.8em}
+
+\textbf{Open Source Digital Edition\slash Edizione Digitale}\\
+Typeset in \LaTeX{} by Giulio Petrucci.\\
+Tipografia e impaginazione in \LaTeX{} a cura di Giulio Petrucci.
+
+\vspace{0.8em}
+
+%% TODO: fix Overfull \hbox (5.78857pt too wide)
+\textbf{License\slash Licenza}\\
+The typesetting layout and source code of this digital edition are licensed under a \textbf{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)}.\\
+\textit{L'impaginazione e il codice sorgente di questa edizione digitale sono rilasciati sotto licenza Creative Commons CC BY-NC-SA 4.0.}
+
+\vspace{0.8em}
+
+\noindent Based on the original edition: \\
+\textit{Basato sull'edizione originale}: \\
+Milano, Fratelli Treves, Editori, 1919 (\textit{Quarto migliaio}).
+\end{small}
+
+\clearpage
+
+\mainmatter
+
+\end{document}
