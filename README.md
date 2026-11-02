@@ -6,7 +6,7 @@
 
 ## 🇮🇹 Premessa
 
-Questo progetto nasce spontaneamente dalla mio interesse per l'opera letteraria di Federigo Tozzi—purtroppo difficile da reperire nell'attuale panorama editoriale italiano— unita alla passione per la stampa tipografica in LaTeX.
+Questo progetto nasce spontaneamente dal mio interesse per l'opera letteraria di Federigo Tozzi—purtroppo difficile da reperire nell'attuale panorama editoriale italiano—unita alla passione per la stampa tipografica in LaTeX.
 
 La produzione letteraria originale di Federigo Tozzi è di Pubblico Dominio. Tutto il lavoro di impaginazione e il codice sorgente del presente progetto è invece rilasciato sotto licenza [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](LICENSE), il che significa che:
 
@@ -21,7 +21,7 @@ Giulio Petrucci, alias `petrux`
 
 ## 🇬🇧 Foreword
 
-This project was born organically out of my appreciation for the literary work of Federigo Tozzi—unfortunately hard to find in the current Italian publishing landscape— combined with my passion for LaTeX typesetting.
+This project was born organically out of my appreciation for the literary work of Federigo Tozzi—unfortunately hard to find in the current Italian publishing landscape—combined with my passion for LaTeX typesetting.
 
 Federigo Tozzi's original literary production is in the Public Domain. All typesetting work and source code in this project are instead released under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)](LICENSE) license, which means that:
 
