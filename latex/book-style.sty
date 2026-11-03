@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{../latex/book-style}[Federigo Tozzi Novel Style]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[italian]{babel}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{ebgaramond} % font
+
+\RequirePackage[
+    paperwidth=130mm,
+    paperheight=200mm,
+    inner=20mm,
+    outer=15mm,
+    top=20mm,
+    bottom=20mm,
+    includeheadfoot
+]{geometry}
+
+\RequirePackage{microtype}  % for better spacing
+
+\RequirePackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}
+  {\chaptertitlename\ \thechapter}
+  {10pt}
+  {\Large}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\brokenpenalty=10000
+
+\newcommand{\asteriskbreak}{%
+  \vspace{1em}
+  \centering * * *
+  \vspace{1em}\par
+}
+
+\newcommand{\sectionbreakspace}{%
+  \vspace{1.5em}\par
+}
