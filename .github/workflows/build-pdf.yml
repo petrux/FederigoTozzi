@@ -1,0 +1,37 @@
+name: Build LaTeX PDFs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Check out the repository source code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Install TeX Live environment with recommended fonts/packages
+      - name: Install TeX Live
+        uses: zaucy/latex-action@v3
+        with:
+          latex_engine: pdflatex
+          extra_packages: |
+            collection-fontsrecommended
+
+      # 3. Grant execution permissions to the build script and execute it
+      - name: Run build script
+        run: |
+          chmod +x scripts/build.sh
+          ./scripts/build.sh
+
+      # 4. Upload the generated PDFs as downloadable workflow artifacts
+      - name: Upload PDF Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-books-pdf
+          path: build/*.pdf
