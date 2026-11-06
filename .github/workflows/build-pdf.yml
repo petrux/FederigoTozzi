@@ -15,21 +15,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Install TeX Live environment with recommended fonts/packages
-      - name: Install TeX Live
-        uses: zaucy/latex-action@v3
-        with:
-          latex_engine: pdflatex
-          extra_packages: |
-            collection-fontsrecommended
-
-      # 3. Grant execution permissions to the build script and execute it
+      # 2. Set up a full TeX Live environment and execute your custom build script
       - name: Run build script
-        run: |
-          chmod +x scripts/build.sh
-          ./scripts/build.sh
+        uses: xu-cheng/texlive-action@v3
+        with:
+          run: |
+            chmod +x scripts/build.sh
+            ./scripts/build.sh
 
-      # 4. Upload the generated PDFs as downloadable workflow artifacts
+      # 3. Upload the generated PDFs as downloadable workflow artifacts
       - name: Upload PDF Artifacts
         uses: actions/upload-artifact@v4
         with:
