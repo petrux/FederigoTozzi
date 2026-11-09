@@ -10,6 +10,11 @@
 *.bbl
 *.blg
 
+# PDF files that might be created by local compilation
+# are also ignored, together with the output `build/`
+build/
+books/**/*.pdf
+
 # OS/Editor temp files
 .vscode/
 .idea/
