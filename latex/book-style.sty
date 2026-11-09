@@ -26,6 +26,45 @@
   {\Large}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\MakeUppercase{%
+    \ifnum\c@secnumdepth>\m@ne
+      \if@mainmatter
+        \@chapapp\ \thechapter\ifstrempty{#1}{}{. \ }%
+      \fi
+    \fi
+    #1}}{}%
+}
+
+\def\@chapter[#1]#2{%
+  \ifnum \c@secnumdepth >\m@ne
+    \if@mainmatter
+      \refstepcounter{chapter}%
+      \typeout{\@chapapp\space\thechapter.}%
+      \ifstrempty{#1}{%
+        \addcontentsline{toc}{chapter}{\@chapapp\ \thechapter}%
+      }{%
+        \addcontentsline{toc}{chapter}{\@chapapp\ \thechapter.\quad #1}%
+      }%
+    \else
+      \addcontentsline{toc}{chapter}{#1}%
+    \fi
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \chaptermark{#1}%
+  \addtocontents{lof}{\protect\addvspace{10\p@}}%
+  \addtocontents{lot}{\protect\addvspace{10\p@}}%
+  \if@twocolumn
+    \@topnewpage[\@makechapterhead{#2}]%
+  \else
+    \@makechapterhead{#2}%
+    \@afterheading
+  \fi
+}
+\makeatother
+
 \clubpenalty=10000
 \widowpenalty=10000
 \brokenpenalty=10000
